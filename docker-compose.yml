@@ -7,3 +7,10 @@ services:
       - /client/node_modules
     ports:
       - 3000:3000
+  server:
+    build: ./server
+    volumes:
+      - ./server:/server
+      - /server/node_modules
+    ports:
+      - 5000:5000
